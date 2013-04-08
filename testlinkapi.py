@@ -1,6 +1,9 @@
 #!/usr/bin/python
 """
 Testlink API client
+
+Thanks for this wrapper goes to Jean Spector
+
 """
 import xmlrpclib
 
