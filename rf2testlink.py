@@ -1,13 +1,13 @@
 import os.path
 import sys
 import tempfile
-from tonat.tools.testlinkapi import TestlinkAPIClient
+from testlinkapi import TestlinkAPIClient
 
 
 class testlink():
     ROBOT_LISTENER_API_VERSION = 2
 
-    def __init__(self, build_version='', project_name='Tonian Eon'):
+    def __init__(self, build_version='', project_name):
         self.tlink = TestlinkAPIClient()
         self.projectname = project_name
         self.build_version = build_version
@@ -29,9 +29,9 @@ class testlink():
         self.testcaseversion = None
         self.testprojectid = None
 
-        # Since currently getTestSuiteID is broken, we'll temporary
-        # use the hardcoded ID of the suite 'Tonat'
-        self.testsuiteid = 44
+        # Since currently get_test_suite_id is broken, use temporary
+        # hardcoded ID for your suite
+        self.testsuiteid = 1
         self.tpid = None
 
     def start_suite(self, name, attrs):
